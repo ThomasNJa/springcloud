@@ -1,6 +1,9 @@
 server:
-  port: 8761 #更改端口为8761
+  port: 8080
+spring:
+  application:
+    name: service-provider
 eureka:
   client:
-    register-with-eureka: false #服务器不用注册到其他服务器
-    fetch-registry: false #服务器不用去服务器抓取注册信息
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
